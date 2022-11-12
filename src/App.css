@@ -1,15 +1,16 @@
 
 * {
     box-sizing: border-box;
+    
   }
   
   :root {
-    --color-1: #242526;
+    --color-1: #00a884;
     --color-2: white;
     --color-3: #0084ff;
     --color-4: grey;
     --color-5: #eb4034;
-    --color-6: #333;
+    --color-6: #e9edef;
   }
   
   /* Navbar */
@@ -161,6 +162,12 @@
     height: 10px;
     border-radius: 50%;
   }
+  .user_status2 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: none;
+  }
   .online {
     background: #34eb52;
   }
@@ -174,7 +181,12 @@
   .messages_user {
     padding: 10px;
     text-align: center;
-    /* border-bottom: 2px solid var(--color-6); */
+    border-bottom: 2px solid var(--color-6);
+  }
+  .roundedborder
+  {
+    background-color: #00a884;
+    border-radius: 10px;
   }
   .no_conv {
     font-size: 20px;
@@ -196,7 +208,6 @@
     padding: 10px;
     border-radius: 5px;
     outline: none;
-    border: none;
   }
   .message_form .btn {
     margin-top: -10px;
@@ -204,7 +215,7 @@
   .messages {
     height: calc(100vh - 200px);
     overflow-y: auto;
-    border-bottom: 1px solid var(--color-6);
+    /* border-bottom: 1px solid var(--color-6); */
   }
   .message_wrapper {
     margin-top: 5px;
@@ -220,6 +231,7 @@
     max-width: 50%;
     text-align: left;
     border-radius: 5px;
+    min-width: 100px;
   }
   .message_wrapper small {
     display: inline-block;
@@ -234,11 +246,12 @@
     color: white;
   }
   .friend {
-    background: var(--color-6);
+    background: #afb8bc;
     color:white;
   }
   .selected_user {
     background: var(--color-6);
+    border-radius:10px;
   }
   .truncate {
     font-size: 14px;
@@ -300,4 +313,12 @@
     .message_wrapper p {
       max-width: 100%;
     }
+    .user_status2 {
+      display: block;
+    }
+  }
+
+  .positionstatus
+  {
+    float:right;
   }
