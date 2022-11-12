@@ -1,5 +1,5 @@
 import React , {useEffect,useRef}from "react";
-import Moment from "react-moment";
+
 const Message=({msg,currentUser,chat})=>{
     const scroll=useRef();
     useEffect(()=>{
@@ -12,7 +12,7 @@ const Message=({msg,currentUser,chat})=>{
        {msg.text}
        
        
-           {/* <Moment fromNow={msg.createdAt.toDate()}/> */}
+           
            <span style={{float:'right'}}>
            {(msg.messageStatus==="sent" && msg.from===currentUser)? <small>&#10003;</small>:null}
            {(msg.messageStatus==="delivered" && msg.from===currentUser)? <small>&#10003;&#10003;</small>:null}

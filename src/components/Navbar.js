@@ -26,13 +26,13 @@ const Navbar = ()=>{
     return (
         <nav>
             <h3>
-                <Link to="/">Messenger</Link>
+                <Link to="/">Messenger App</Link>
             </h3>
             <div>
                 {
                     user ? 
                     <>
-                    <Link to="/profile">Profile</Link>
+                    <Link to="/profile">My Details</Link>
                     <button className="btn" onClick={handleLogOut}>Logout</button>
                     </>
                     :

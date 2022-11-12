@@ -4,7 +4,7 @@ import { collection,query,where,onSnapshot,addDoc, Timestamp, orderBy,setDoc, do
 import User from "../components/User";
 import MessageInput from "../components/MessageInput";
 import Message from "../components/Message";
-import { async } from "@firebase/util";
+
 
 const Home = ()=>{
     const [users,setUsers]=useState([])
@@ -170,9 +170,6 @@ const onBlur = async () => {
                     </div>)}
                 )}
 
-                {/* <div className="messages">
-                    {messages.length?messages.map((msg,i)=><Message key={i} msg={msg} currentUser={currentUser} chat={chat}/>):null}
-                </div> */}
                 <MessageInput handleSubmit={handleSubmit} text={text} setText={setText}/>
                 </>
                 :<h3 className="no_conv">Choose a conversation</h3>}

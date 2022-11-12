@@ -10,6 +10,7 @@ const Register = ()=>{
         setData({...data,[event.target.name]:event.target.value})
     }
     const navigate=useNavigate()
+    
     const handleSubmit=async (event)=>{
         event.preventDefault();
         setData({...data,error:null,loading:true})

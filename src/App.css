@@ -198,7 +198,7 @@
     bottom: 0;
     left: 20%;
     width: 100%;
-    height: 30px;
+    height: 45px;
     display: flex;
     align-items: center;
   }
@@ -278,9 +278,10 @@
       grid-template-columns: 2fr 3fr;
     }
     .message_form {
-      left: 3%;
+      left: 15%;
       right: 0;
       bottom: 5px;
+      position: fixed;
     }
     .message_wrapper p {
       max-width: 75%;
