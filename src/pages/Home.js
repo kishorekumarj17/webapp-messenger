@@ -63,10 +63,26 @@ const onBlur = async () => {
     }
 };
 
+const onUnload = async(e)=>
+{
+    e.preventDefault();
+    try
+    {
+        await updateDoc(doc(firestoredb,'users',auth.currentUser.uid),{
+            isOnline:false
+        })
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+}
+
     useEffect(()=>{
 
         window.addEventListener("focus", onFocus);
         window.addEventListener("blur", onBlur);
+        window.addEventListener("beforeunload",onUnload)
         onFocus();
        
         const userref=collection(firestoredb,'users')
@@ -81,6 +97,7 @@ const onBlur = async () => {
         return ()=> {
             window.removeEventListener("focus", onFocus);
             window.removeEventListener("blur", onBlur);
+            window.removeEventListener("beforeunload",onUnload)
             unsubscribe();
         };
     },[])
